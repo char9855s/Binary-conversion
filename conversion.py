@@ -49,6 +49,8 @@ def sj(number):
 # 输出转化后的结果
 def JG():
     for i in a_list:
+        if i==a_list[-1]:
+            print(' ',end='')
         print(i, end='')
     a_list.clear()  # 每次输出结束后清空列表
     print(end='\n')  # 每次输出结束后换行
@@ -60,19 +62,23 @@ def zhuanh():
     print('转为为二进制：', end=' ')
     JZ = 2
     B(number)
+    a_list.append('B')
     JG()
     print('转为为八进制：', end=' ')
     JZ = 8
     B(number)
+    a_list.append('O')
     JG()
     print('转化为十进制：', end=' ')
     JZ = 10
     B(number)
+    a_list.append('D')
     JG()
     print('转化为十六进制：', end=' ')
     JZ = 16
     B(number)
     SL(number)
+    a_list.append('H')
     JG()
 
 
