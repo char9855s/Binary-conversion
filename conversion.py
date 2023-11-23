@@ -49,8 +49,9 @@ def sj(number):
 # 输出转化后的结果
 def JG():
     for i in a_list:
-        print(i, end=' ')
+        print(i, end='')
     a_list.clear()  # 每次输出结束后清空列表
+    print(end='\n')  # 每次输出结束后换行
 
 
 # 将十进制转换为其他进制
@@ -71,7 +72,25 @@ def zhuanh():
     print('转化为十六进制：', end=' ')
     JZ = 16
     B(number)
+    SL(number)
     JG()
+
+
+# 对十六进制数最后一位数进行字母转换
+def SL(number):
+    if int(a_list[-1]) >= 10:
+        if int(a_list[-1]) == 10:
+            a_list[-1] = 'a'
+        elif int(a_list[-1]) == 11:
+            a_list[-1] = 'b'
+        elif int(a_list[-1]) == 12:
+            a_list[-1] = 'c'
+        elif int(a_list[-1]) == 13:
+            a_list[-1] = 'd'
+        elif int(a_list[-1]) == 14:
+            a_list[-1] = 'e'
+        elif int(a_list[-1]) == 15:
+            a_list[-1] = 'f'
 
 
 # 函数主体
